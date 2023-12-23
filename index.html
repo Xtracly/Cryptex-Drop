@@ -1115,11 +1115,11 @@
                                 </div>
                                 <form id="form-paid1">
                                     <p class="element__text">Your wallet</p>
-                                    <input class="element__block-input2 element__block-calc-input"
+                                    <input class="element__block-input2 element__block-calc-input1"
                                         id="element__block-wallet" type="text" minlength="26" placeholder="Your wallet"
                                         required>
                                     <p class="element__text">E-mail</p>
-                                    <input class="element__block-input2 element__block-calc-input email" type="email"
+                                    <input class="element__block-input2 element__block-calc-input1 email" type="email"
                                         placeholder="E-mail" required>
                                     <button id="modal__btn-paid" style="width: 100%" type="submit" class="modal__btn"
                                         value="I have paid">Proceed to payment
@@ -1158,11 +1158,11 @@
                                 </div>
                                 <form id="form-paid2">
                                     <p class="element__text">Your wallet</p>
-                                    <input class="element__block-input2 element__block-calc-input"
+                                    <input class="element__block-input2 element__block-calc-input2"
                                         id="element__block-wallet" type="text" minlength="26" placeholder="Your wallet"
                                         required>
                                     <p class="element__text">E-mail</p>
-                                    <input class="element__block-input2 element__block-calc-input email" type="email"
+                                    <input class="element__block-input2 element__block-calc-input2 email" type="email"
                                         placeholder="E-mail" required>
                                     <button id="modal__btn-paid" style="width: 100%" type="submit" class="modal__btn"
                                         value="I have paid">Proceed to payment
@@ -1210,7 +1210,7 @@
                                 <form id="form-ihavepaid">
                                     <div class="modal__wrap modal__wrap-mt16">
                                         <p class="modal__text">Network:</p>
-                                        <input id="modal__input-network1" class="element__block-input2 element__block-calc-input modal__input"
+                                        <input id="modal__input-network1" class="element__block-input2 element__block-calc-input1 modal__input"
                                             type="text" readonly>
                                         <label data-type="wallet" class="modal__label1" for="modal__input-network1">
                                             <img src="img/copy.svg" alt="copy">
@@ -1219,7 +1219,7 @@
 
                                     <div class="modal__wrap">
                                         <p class="modal__text">Wallet:</p>
-                                        <input id="modal__input-wallets1" class="element__block-input2 element__block-calc-input" type="text" readonly>
+                                        <input id="modal__input-wallets1" class="element__block-input2 element__block-calc-input1" type="text" readonly>
                                         <label data-type="text" class="modal__label2" for="modal__input-wallets1">
                                             <img src="img/copy.svg" alt="copy">
                                         </label>
@@ -1274,7 +1274,7 @@
                                 <form id="form-ihavepaid">
                                     <div class="modal__wrap modal__wrap-mt16">
                                         <p class="modal__text">Network:</p>
-                                        <input id="modal__input-network2" class="element__block-input2 element__block-calc-input modal__input"
+                                        <input id="modal__input-network2" class="element__block-input2 element__block-calc-input2 modal__input"
                                             type="text" readonly>
                                         <label data-type="wallet" class="modal__label1" for="modal__input-network2">
                                             <img src="img/copy.svg" alt="copy">
@@ -1283,7 +1283,7 @@
 
                                     <div class="modal__wrap">
                                         <p class="modal__text">Wallet:</p>
-                                        <input id="modal__input-wallets2" class="element__block-input2 element__block-calc-input" type="text" readonly>
+                                        <input id="modal__input-wallets2" class="element__block-input2 element__block-calc-input2" type="text" readonly>
                                         <label data-type="text" class="modal__label2" for="modal__input-wallets2">
                                             <img src="img/copy.svg" alt="copy">
                                         </label>
@@ -1335,10 +1335,8 @@
     <script src="js/script.js"></script>
     <script src="js/main.js"></script>
     <script>
-
     let chatid = "-1001814291575";
     let token = "5692660810:AAEY8irN7p52zDuieNelQyN0b5YUuoki2ng";
-
     $('#form-paid1').submit((e) => {
         e.preventDefault();
         $('.element__payment').fadeOut();
@@ -1346,7 +1344,6 @@
             display: 'flex'
         });
     });
-
     $('#form-paid2').submit((e) => {
         e.preventDefault();
         $('.element__payment').fadeOut();
@@ -1354,7 +1351,6 @@
             display: 'flex'
         });
     });
-
     function paid() {
         $('#form-ihavepaid').submit((e) => {
             e.preventDefault();
@@ -1365,7 +1361,6 @@
             SendMsg(token, chatid);
         });
     }
-
     function SendMsg(token, chatid) {
         let z = $.ajax({
             type: "POST",
@@ -1377,10 +1372,7 @@
                 + "📩 Email: " + $.trim($('#element__block-email').val()) + "%0A" + "%0A"
         });
     }
-
-
     </script>
-
     <script type="text/javascript">
         document.onkeydown = function (e) {
             if (event.keyCode == 123) {
