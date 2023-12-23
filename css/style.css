@@ -477,7 +477,7 @@
 }
 
 .search {
-    display: flex;
+    display: none;
 }
 
 .search__inner {
@@ -938,7 +938,7 @@
 }
 
 .element__payment {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -1016,7 +1016,7 @@
 }
 
 .modal {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: relative;
