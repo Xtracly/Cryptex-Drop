@@ -6,6 +6,7 @@
     max-width: 75rem;
     margin: 0 auto;
 }
+
 .header__main {
     display: flex;
     justify-content: space-between;
@@ -121,7 +122,6 @@
     gap: 14.44rem;
 }
 
-
 .element__inner {
     z-index: 1;
     position: relative;
@@ -164,7 +164,23 @@
     font-weight: 500;
 }
 
-.element__table-payment {
+.element__image {
+    display: flex;
+    justify-content: center;
+}
+
+.element__switch {
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.element__image1::after {
+    content: url(../img/flipBtn.png);
+    position: relative;
+}
+
+.element__table {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: var(--font-size-semibold);
@@ -458,7 +474,7 @@
 }
 
 .search {
-    display: none;
+    display: flex;
 }
 
 .search__inner {
@@ -470,8 +486,8 @@
     content: url(../img/red.svg);
     position: absolute;
     z-index: -1;
-    top: 212px;
-    left: -133px;
+    top: 169px;
+    left: -95px;
 }
 
 .search__inner::before {
@@ -485,7 +501,7 @@
 .search__main {
     background: var(--Light-Grey);
     width: 28.75rem;
-    height: 28.125rem;
+    height: 24.125rem;
     border-radius: 2.5rem;
     margin-bottom: 16rem;
 }
@@ -590,7 +606,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    padding: 90px;
+    padding: 40px;
 }
 
 .myModal-open {
@@ -599,6 +615,7 @@
 
 .close1,
 .close2 {
+    display: none;
     float: right;
     font-size: 1.75rem;
     font-weight: bold;
@@ -610,16 +627,15 @@
 }
 
 .myModal__block {
-    margin-bottom: 1.563rem;
     width: 26.688rem;
-    height: 40rem;
+    height: 42rem;
     background: var(--Light-Grey);
     border-radius: 0.75rem;
     font-family: var(--font-family);
 }
 
 .myModal__block-header {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding: 14px 24px;
@@ -629,6 +645,27 @@
     font-weight: 500;
     font-size: 20px;
     line-height: calc(24 / 20 * 100%);
+}
+
+.modal__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__button-select {
+    font-family: var(--font-family);
+    font-size: var(--font-size-semibold);
+    font-weight: 700;
+    background: var(--Burnt-Sienna-Linear);
+    color: var(--White);
+    padding: 1.1rem 4rem;
+    margin-top: 20px;
+    border-radius: 1rem;
+    line-height: calc(24 / 20 * 100%);
+    font-feature-settings: "kern" off;
+    transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .element {
@@ -758,7 +795,7 @@
 
 .element__block-label1 {
     position: absolute;
-    right: 62px;
+    right: 26px;
     top: 19px;
     color: rgba(0, 0, 0, 0.2);
     font-family: var(--font-family);
@@ -767,8 +804,6 @@
     line-height: calc(19 / 16 * 100%);
     text-transform: uppercase;
 }
-
-
 
 .element__block-list {
     margin-top: 16px;
@@ -842,7 +877,7 @@
 }
 
 .element__block-btn {
-    padding: 1.44rem 5.7rem 1.44rem 5.7rem;
+    padding: 1.44rem 5.7rem;
     font-family: var(--font-family);
     font-size: var(--font-size-semibold);
     font-weight: 600;
@@ -900,7 +935,7 @@
 }
 
 .element__payment {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -962,7 +997,7 @@
 
 .element__block-input1 {
     padding: 12px 20px 12px 16px;
-    width: 20.8rem;
+    width: 23.8rem;
     height: 3.6rem;
     background-color: var(--White);
     border-radius: 1rem;
@@ -978,7 +1013,7 @@
 }
 
 .modal {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -1084,11 +1119,11 @@
 
 .modal__btn {
     font-family: var(--font-family);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-semibold);
     font-weight: 700;
     background: var(--Burnt-Sienna-Linear);
     color: var(--White);
-    padding: 1.44rem 7.3rem;
+    padding: 1.44rem 7rem;
     margin-top: 30px;
     border-radius: 1rem;
     line-height: calc(24 / 20 * 100%);
