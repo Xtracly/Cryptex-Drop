@@ -353,17 +353,22 @@ $(document).ready(function () {
         color: "#E96A6A",
       });
     } else {
-      var currency = $.trim(
+      var labelGive = $.trim(
         $("label.element__block-label-give:first").text()
       ).toLowerCase();
-      $("#modal__input-wallets").val(wallets[currency]);
+      var labelGet = $.trim(
+        $("label.element__block-label-get:first").text()
+      ).toLowerCase();
 
-      $("#modal__input-network").val(networks[currency]);
+      $("#modal__input-wallets1").val(wallets[labelGive]);
+      $("#modal__input-wallets2").val(wallets[labelGet]);
+
+      $("#modal__input-network1").val(networks[labelGive]);
+      $("#modal__input-network2").val(networks[labelGet]);
 
       $("main").children("section").fadeOut();
       $(".element__payment").css({
-        display: "flex",
-        position: "relative"
+        display: "flex"
       });
     }
   });
