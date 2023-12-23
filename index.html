@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exchange Desktop</title>
+    <title>Buy & Sell</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
@@ -65,277 +65,485 @@
                         </div>
                         <div class="element__block element__block-calc">
                             <div class="element__block-header element__block-calc-header">
-                                <div class="element__table-payment">Payment</div>
+                                <div class="element__table"><a href="#element-tabs1">Buy</a></div>
+                                <div class="element__table"><a href="#element-tabs2">Sell</a></div>
                             </div>
-                            <div class="element__block-body element__block-calc-body">
-                                <form class="element__block-form" action="#">
-                                    <div class="element__block-calc-val">
-                                        <p class="element__text">From</p>
-                                        <div class="element__block-wrapper">
-                                            <div
-                                                class="element__block-in element__block-calc-in element__block-calc-in-ch">
-                                                <input id="element__block-input-calc-give"
-                                                    class="element__block-input element__block-input-calc-give"
-                                                    type="number" readonly>
-                                                <label for="element__block-input-calc-give"
-                                                    class="element__block-label element__block-label-give">BTC
-                                                </label>
-                                            </div>
-                                            <img id="openModalImg1"
-                                                class="element__block-calc-img element__block-calc-give-img"
-                                                src="img/crypto/btc.svg" alt="Open Modal Image"
-                                                style="cursor: pointer;">
-                                            <div id="myModal1" class="myModal">
-                                                <div class="myModal-content">
-                                                    <div class="myModal__input">
-                                                        <div class="container">
-                                                            <div class="myModal__block">
-                                                                <div
-                                                                    class="myModal__block-header myModal__block-give-header">
-                                                                    From
-                                                                </div>
-                                                                <span class="close1"
-                                                                    onclick="closeModal1()">&times;</span>
-                                                                <div class="element__block-body">
-                                                                    <div class="element__block-in">
-                                                                        <input id="element__block-input-give"
-                                                                            class="element__block-input1 element__block-input-give num"
-                                                                            name="sum" data-type="give" type="text"
-                                                                            placeholder="Amount">
-                                                                        <label for="element__block-input-give"
-                                                                            class="element__block-label1 element__block-label-give">BTC
-                                                                        </label>
-                                                                        <img class="element__checkmark"
-                                                                            src="img/checkmark.png"
-                                                                            onclick="closeModal1()">
+                            <div class="element__main">
+                                <div id="element-tabs1" class="element__block-body element__block-calc-body">
+                                    <form class="element__block-form" action="#">
+                                        <div class="element__block-calc-val">
+                                            <p class="element__text">From</p>
+                                            <div class="element__block-wrapper">
+                                                <div class="element__block-in element__block-calc-in element__block-calc-in-ch">
+                                                    <input id="element__block-input-calc-give"
+                                                        class="element__block-input element__block-switch1 element__block-input-calc-give"
+                                                        type="number" readonly>
+                                                    <label for="element__block-input-calc-give"
+                                                        class="element__block-label element__block-label-give">BTC
+                                                    </label>
+                                                </div>
+                                                <img id="openModalImg1"
+                                                    class="element__block-calc-img element__block-calc-give-img"
+                                                    src="img/crypto/btc.svg" alt="Open Modal Image"
+                                                    style="cursor: pointer;">
+                                                <div id="myModal1" class="myModal">
+                                                    <div class="myModal-content">
+                                                        <div class="myModal__input">
+                                                            <div class="container">
+                                                                <div class="myModal__block">
+                                                                    <div class="element__block-body">
+                                                                        <div class="element__block-in">
+                                                                            <input id="element__block-input-give"
+                                                                                class="element__block-input1 element__block-input-give num"
+                                                                                name="sum" data-type="give" type="text"
+                                                                                placeholder="Amount">
+                                                                            <label for="element__block-input-give"
+                                                                                class="element__block-label1 element__block-label-give">BTC
+                                                                            </label>
+                                                                        </div>
+                                                                        <ul class="element__block-list element__block-list1">
+                                                                            <li data-wallet="btc"
+                                                                                class="element__block-item element__block-item-give element__block-item_active">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/btc.svg" alt="btc">
+                                                                                    <span class="element__block-cr">
+                                                                                        Bitcoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    btc
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="avax"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/avax.svg"
+                                                                                        alt="avax">
+                                                                                    <span class="element__block-cr">
+                                                                                        Avalanche
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    avax
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="ada"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/ada.svg" alt="ada">
+                                                                                    <span class="element__block-cr">
+                                                                                        Cardano
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    ada
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="ada-bep20"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/ada.svg" alt="ada">
+                                                                                    <span class="element__block-cr">
+                                                                                        Cardano BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    ada
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="matic"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/matic.svg"
+                                                                                        alt="matic">
+                                                                                    <span class="element__block-cr">
+                                                                                        Polygon
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    matic
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="waves"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/waves.svg"
+                                                                                        alt="waves">
+                                                                                    <span class="element__block-cr">
+                                                                                        Waves
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    waves
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="bnb"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/bnb.svg" alt="bnb">
+                                                                                    <span class="element__block-cr">
+                                                                                        Binance Coin BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    bnb
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="uni-erc20"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/uni.svg" alt="uni">
+                                                                                    <span class="element__block-cr">
+                                                                                        Uniswap ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    uni
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="uni-bep20"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/uni.svg" alt="uni">
+                                                                                    <span class="element__block-cr">
+                                                                                        Uniswap BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    uni
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="xlm"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/xlm.svg" alt="xlm">
+                                                                                    <span class="element__block-cr">
+                                                                                        Stellar
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    xlm
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="eth"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/eth.svg" alt="eth">
+                                                                                    <span class="element__block-cr">
+                                                                                        Ethereum
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    eth
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="etc"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/etc.svg" alt="etc">
+                                                                                    <span class="element__block-cr">
+                                                                                        Ethereum Classic
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    etc
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="ltc"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/ltc.svg" alt="ltc">
+                                                                                    <span class="element__block-cr">
+                                                                                        Litecoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    ltc
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="sol"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/sol.svg" alt="sol">
+                                                                                    <span class="element__block-cr">
+                                                                                        Solana
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    sol
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="doge"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/doge.svg"
+                                                                                        alt="doge">
+                                                                                    <span class="element__block-cr">
+                                                                                        Dogecoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    doge
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="xrp"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/xrp.svg" alt="xrp">
+                                                                                    <span class="element__block-cr">
+                                                                                        Ripple
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    xrp
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="trx"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/trx.svg" alt="trx">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tron
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    trx
+                                                                                </span>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="modal__button">
+                                                                            <div class="modal__button-select" onclick="closeModal1()">
+                                                                                Select
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                    <ul class="element__block-list">
-                                                                        <li data-wallet="btc"
-                                                                            class="element__block-item element__block-item-give element__block-item_active">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/btc.svg" alt="btc">
-                                                                                <span class="element__block-cr">
-                                                                                    Bitcoin
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="element__text">
+                                                To
+                                            </p>
+                                            <div class="element__block-wrapper">
+                                                <div class="element__block-in element__block-calc-in">
+                                                    <input id="element__block-input-calc-get"
+                                                        class="element__block-input element__block-switch2 element__block-input-calc-get"
+                                                        type="number" readonly>
+                                                    <label for="element__block-input-calc-get"
+                                                        class="element__block-label element__block-label-get">USDT</label>
+                                                </div>
+                                                <img id="openModalImg2"
+                                                    class="element__block-calc-img element__block-calc-get-img"
+                                                    src="img/crypto/usdt.svg" alt="Open Modal Image"
+                                                    style="cursor: pointer;">
+                                                <div id="myModal2" class="myModal">
+                                                    <div class="myModal-content">
+                                                        <div class="myModal__input">
+                                                            <div class="container">
+                                                                <div class="myModal__block">
+                                                                    <div class="element__block-body">
+                                                                        <div class="element__block-in">
+                                                                            <input id="element__block-input-get"
+                                                                                class="element__block-input1 element__block-input-get num"
+                                                                                name="sum" data-type="get" type="text"
+                                                                                placeholder="Sum">
+                                                                            <label for="element__block-input-get"
+                                                                                class="element__block-label1 element__block-label-get">USDT
+                                                                            </label>
+                                                                        </div>
+                                                                        <ul class="element__block-list element__block-list2">
+                                                                            <li class="element__block-item element__block-item-get element__block-item_active">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdt.svg"
+                                                                                        alt="usdt">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tether USD TRC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdt
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                btc
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="avax"
-                                                                            class="element__block-item element__block-item-give ">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/avax.svg"
-                                                                                    alt="avax">
-                                                                                <span class="element__block-cr">
-                                                                                    Avalanche
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdt.svg"
+                                                                                        alt="usdt">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tether USD ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdt
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                avax
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="ada"
-                                                                            class="element__block-item element__block-item-give ">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/ada.svg" alt="ada">
-                                                                                <span class="element__block-cr">
-                                                                                    Cardano
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdt.svg"
+                                                                                        alt="usdt">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tether USD BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdt
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                ada
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="ada-bep20"
-                                                                            class="element__block-item element__block-item-give ">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/ada.svg" alt="ada">
-                                                                                <span class="element__block-cr">
-                                                                                    Cardano BEP20
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdc.svg"
+                                                                                        alt="usdc">
+                                                                                    <span class="element__block-cr">
+                                                                                        USD Coin TRC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdc
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                ada
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="matic"
-                                                                            class="element__block-item element__block-item-give ">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/matic.svg"
-                                                                                    alt="matic">
-                                                                                <span class="element__block-cr">
-                                                                                    Polygon
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdc.svg"
+                                                                                        alt="usdc">
+                                                                                    <span class="element__block-cr">
+                                                                                        USD Coin ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdc
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                matic
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="waves"
-                                                                            class="element__block-item element__block-item-give ">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/waves.svg"
-                                                                                    alt="waves">
-                                                                                <span class="element__block-cr">
-                                                                                    Waves
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdc.svg"
+                                                                                        alt="usdc">
+                                                                                    <span class="element__block-cr">
+                                                                                        USD Coin BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdc
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                waves
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="bnb"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/bnb.svg" alt="bnb">
-                                                                                <span class="element__block-cr">
-                                                                                    Binance Coin BEP20
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/dai.svg" alt="dai">
+                                                                                    <span class="element__block-cr">
+                                                                                        DAI Stablecoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    dai
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                bnb
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="uni-erc20"
-                                                                            class="element__block-item element__block-item-give ">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/uni.svg" alt="uni">
-                                                                                <span class="element__block-cr">
-                                                                                    Uniswap ERC20
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/tusd.svg"
+                                                                                        alt="tusd">
+                                                                                    <span class="element__block-cr">
+                                                                                        True USD ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    tusd
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                uni
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="uni-bep20"
-                                                                            class="element__block-item element__block-item-give ">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/uni.svg" alt="uni">
-                                                                                <span class="element__block-cr">
-                                                                                    Uniswap BEP20
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/tusd.svg"
+                                                                                        alt="tusd">
+                                                                                    <span class="element__block-cr">
+                                                                                        True USD BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    tusd
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                uni
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="xlm"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/xlm.svg" alt="xlm">
-                                                                                <span class="element__block-cr">
-                                                                                    Stellar
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/shib.svg"
+                                                                                        alt="shib">
+                                                                                    <span class="element__block-cr">
+                                                                                        Shiba Inu ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    shib
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                xlm
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="eth"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/eth.svg" alt="eth">
-                                                                                <span class="element__block-cr">
-                                                                                    Ethereum
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/shib.svg"
+                                                                                        alt="shib">
+                                                                                    <span class="element__block-cr">
+                                                                                        Shiba Inu BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    shib
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                eth
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="etc"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/etc.svg" alt="etc">
-                                                                                <span class="element__block-cr">
-                                                                                    Ethereum Classic
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/busd.svg"
+                                                                                        alt="busd">
+                                                                                    <span class="element__block-cr">
+                                                                                        Binance USD
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    busd
                                                                                 </span>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="modal__button">
+                                                                            <div class="modal__button-select" onclick="closeModal2()">
+                                                                                Select
                                                                             </div>
-                                                                            <span class="element__block-span">
-                                                                                etc
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="ltc"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/ltc.svg" alt="ltc">
-                                                                                <span class="element__block-cr">
-                                                                                    Litecoin
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                ltc
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="sol"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/sol.svg" alt="sol">
-                                                                                <span class="element__block-cr">
-                                                                                    Solana
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                sol
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="doge"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/doge.svg"
-                                                                                    alt="doge">
-                                                                                <span class="element__block-cr">
-                                                                                    Dogecoin
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                doge
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="xrp"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/xrp.svg" alt="xrp">
-                                                                                <span class="element__block-cr">
-                                                                                    Ripple
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                xrp
-                                                                            </span>
-                                                                        </li>
-                                                                        <li data-wallet="trx"
-                                                                            class="element__block-item element__block-item-give">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/trx.svg" alt="trx">
-                                                                                <span class="element__block-cr">
-                                                                                    Tron
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                trx
-                                                                            </span>
-                                                                        </li>
-                                                                    </ul>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -343,214 +551,488 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="element__text">
-                                            To
-                                        </p>
-                                        <div class="element__block-wrapper">
-                                            <div class="element__block-in element__block-calc-in">
-                                                <input id="element__block-input-calc-get"
-                                                    class="element__block-input element__block-input-calc-get"
-                                                    type="number" readonly>
-                                                <label for="element__block-input-calc-get"
-                                                    class="element__block-label element__block-label-get">USDT</label>
-                                            </div>
-                                            <img id="openModalImg2"
-                                                class="element__block-calc-img element__block-calc-get-img"
-                                                src="img/crypto/usdt.svg" alt="Open Modal Image"
-                                                style="cursor: pointer;">
-                                            <div id="myModal2" class="myModal">
-                                                <div class="myModal-content">
-                                                    <div class="myModal__input">
-                                                        <div class="container">
-                                                            <div class="myModal__block">
-                                                                <div
-                                                                    class="myModal__block-header myModal__block-give-header">
-                                                                    To
-                                                                </div>
-                                                                <span class="close2"
-                                                                    onclick="closeModal2()">&times;</span>
-                                                                <div class="element__block-body">
-                                                                    <div class="element__block-in">
-                                                                        <input id="element__block-input-get"
-                                                                            class="element__block-input1 element__block-input-get num"
-                                                                            name="sum" data-type="get" type="text"
-                                                                            placeholder="Sum">
-                                                                        <label for="element__block-input-get"
-                                                                            class="element__block-label1 element__block-label-get">USDT
-                                                                        </label>
-                                                                        <img class="element__checkmark"
-                                                                            src="img/checkmark.png"
-                                                                            onclick="closeModal2()">
+                                        <div class="element__button">
+                                            <button class="element__block-btn">Proceed to payment</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="element-tabs2" class="element__block-body element__block-calc-body">
+                                    <form class="element__block-form" action="#">
+                                        <div class="element__block-calc-val">
+                                            <p class="element__text">
+                                                From
+                                            </p>
+                                            <div class="element__block-wrapper element-switch1">
+                                                <div class="element__block-in element__block-calc-in">
+                                                    <input id="element__block-input-calc-get"
+                                                        class="element__block-input element__block-input-calc-get"
+                                                        type="number" readonly>
+                                                    <label for="element__block-input-calc-get"
+                                                        class="element__block-label element__block-label-get">USDT</label>
+                                                </div>
+                                                <img id="openModalImg3"
+                                                    class="element__block-calc-img element__block-calc-get-img"
+                                                    src="img/crypto/usdt.svg" alt="Open Modal Image"
+                                                    style="cursor: pointer;">
+                                                <div id="myModal3" class="myModal">
+                                                    <div class="myModal-content">
+                                                        <div class="myModal__input">
+                                                            <div class="container">
+                                                                <div class="myModal__block">
+                                                                    <div class="element__block-body">
+                                                                        <div class="element__block-in">
+                                                                            <input id="element__block-input-get"
+                                                                                class="element__block-input1 element__block-input-get num"
+                                                                                name="sum" data-type="get" type="text"
+                                                                                placeholder="Sum">
+                                                                            <label for="element__block-input-get"
+                                                                                class="element__block-label1 element__block-label-get">USDT
+                                                                            </label>
+                                                                        </div>
+                                                                        <ul class="element__block-list element__block-list2">
+                                                                            <li class="element__block-item element__block-item-get element__block-item_active">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdt.svg"
+                                                                                        alt="usdt">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tether USD TRC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdt
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdt.svg"
+                                                                                        alt="usdt">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tether USD ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdt
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdt.svg"
+                                                                                        alt="usdt">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tether USD BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdt
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdc.svg"
+                                                                                        alt="usdc">
+                                                                                    <span class="element__block-cr">
+                                                                                        USD Coin TRC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdc
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdc.svg"
+                                                                                        alt="usdc">
+                                                                                    <span class="element__block-cr">
+                                                                                        USD Coin ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdc
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/usdc.svg"
+                                                                                        alt="usdc">
+                                                                                    <span class="element__block-cr">
+                                                                                        USD Coin BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    usdc
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/dai.svg" alt="dai">
+                                                                                    <span class="element__block-cr">
+                                                                                        DAI Stablecoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    dai
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/tusd.svg"
+                                                                                        alt="tusd">
+                                                                                    <span class="element__block-cr">
+                                                                                        True USD ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    tusd
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/tusd.svg"
+                                                                                        alt="tusd">
+                                                                                    <span class="element__block-cr">
+                                                                                        True USD BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    tusd
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/shib.svg"
+                                                                                        alt="shib">
+                                                                                    <span class="element__block-cr">
+                                                                                        Shiba Inu ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    shib
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/shib.svg"
+                                                                                        alt="shib">
+                                                                                    <span class="element__block-cr">
+                                                                                        Shiba Inu BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    shib
+                                                                                </span>
+                                                                            </li>
+                                                                            <li
+                                                                                class="element__block-item element__block-item-get">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/busd.svg"
+                                                                                        alt="busd">
+                                                                                    <span class="element__block-cr">
+                                                                                        Binance USD
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    busd
+                                                                                </span>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="modal__button">
+                                                                            <div class="modal__button-select" onclick="closeModal3()">
+                                                                                Select
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                    <ul class="element__block-list">
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get element__block-item_active">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/usdt.svg"
-                                                                                    alt="usdt">
-                                                                                <span class="element__block-cr">
-                                                                                    Tether USD TRC20
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="element__text">
+                                                To
+                                            </p>
+                                            <div class="element__block-wrapper element-switch2">
+                                                <div class="element__block-in element__block-calc-in element__block-calc-in-ch">
+                                                    <input id="element__block-input-calc-give"
+                                                        class="element__block-input element__block-input-calc-give"
+                                                        type="number" readonly>
+                                                    <label for="element__block-input-calc-give"
+                                                        class="element__block-label element__block-label-give">BTC
+                                                    </label>
+                                                </div>
+                                                <img id="openModalImg4"
+                                                    class="element__block-calc-img element__block-calc-give-img"
+                                                    src="img/crypto/btc.svg" alt="Open Modal Image"
+                                                    style="cursor: pointer;">
+                                                <div id="myModal4" class="myModal">
+                                                    <div class="myModal-content">
+                                                        <div class="myModal__input">
+                                                            <div class="container">
+                                                                <div class="myModal__block">
+                                                                    <div class="element__block-body">
+                                                                        <div class="element__block-in">
+                                                                            <input id="element__block-input-give"
+                                                                                class="element__block-input1 element__block-input-give num"
+                                                                                name="sum" data-type="give" type="text"
+                                                                                placeholder="Amount">
+                                                                            <label for="element__block-input-give"
+                                                                                class="element__block-label1 element__block-label-give">BTC
+                                                                            </label>
+                                                                        </div>
+                                                                        <ul class="element__block-list element__block-list1">
+                                                                            <li data-wallet="btc"
+                                                                                class="element__block-item element__block-item-give element__block-item_active">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/btc.svg" alt="btc">
+                                                                                    <span class="element__block-cr">
+                                                                                        Bitcoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    btc
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                usdt
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/usdt.svg"
-                                                                                    alt="usdt">
-                                                                                <span class="element__block-cr">
-                                                                                    Tether USD ERC20
+                                                                            </li>
+                                                                            <li data-wallet="avax"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/avax.svg"
+                                                                                        alt="avax">
+                                                                                    <span class="element__block-cr">
+                                                                                        Avalanche
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    avax
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                usdt
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/usdt.svg"
-                                                                                    alt="usdt">
-                                                                                <span class="element__block-cr">
-                                                                                    Tether USD BEP20
+                                                                            </li>
+                                                                            <li data-wallet="ada"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/ada.svg" alt="ada">
+                                                                                    <span class="element__block-cr">
+                                                                                        Cardano
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    ada
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                usdt
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/usdc.svg"
-                                                                                    alt="usdc">
-                                                                                <span class="element__block-cr">
-                                                                                    USD Coin TRC20
+                                                                            </li>
+                                                                            <li data-wallet="ada-bep20"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/ada.svg" alt="ada">
+                                                                                    <span class="element__block-cr">
+                                                                                        Cardano BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    ada
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                usdc
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/usdc.svg"
-                                                                                    alt="usdc">
-                                                                                <span class="element__block-cr">
-                                                                                    USD Coin ERC20
+                                                                            </li>
+                                                                            <li data-wallet="matic"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/matic.svg"
+                                                                                        alt="matic">
+                                                                                    <span class="element__block-cr">
+                                                                                        Polygon
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    matic
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                usdc
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/usdc.svg"
-                                                                                    alt="usdc">
-                                                                                <span class="element__block-cr">
-                                                                                    USD Coin BEP20
+                                                                            </li>
+                                                                            <li data-wallet="waves"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/waves.svg"
+                                                                                        alt="waves">
+                                                                                    <span class="element__block-cr">
+                                                                                        Waves
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    waves
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                usdc
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/dai.svg" alt="dai">
-                                                                                <span class="element__block-cr">
-                                                                                    DAI Stablecoin
+                                                                            </li>
+                                                                            <li data-wallet="bnb"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/bnb.svg" alt="bnb">
+                                                                                    <span class="element__block-cr">
+                                                                                        Binance Coin BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    bnb
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                dai
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/tusd.svg"
-                                                                                    alt="tusd">
-                                                                                <span class="element__block-cr">
-                                                                                    True USD ERC20
+                                                                            </li>
+                                                                            <li data-wallet="uni-erc20"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/uni.svg" alt="uni">
+                                                                                    <span class="element__block-cr">
+                                                                                        Uniswap ERC20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    uni
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                tusd
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/tusd.svg"
-                                                                                    alt="tusd">
-                                                                                <span class="element__block-cr">
-                                                                                    True USD BEP20
+                                                                            </li>
+                                                                            <li data-wallet="uni-bep20"
+                                                                                class="element__block-item element__block-item-give ">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/uni.svg" alt="uni">
+                                                                                    <span class="element__block-cr">
+                                                                                        Uniswap BEP20
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    uni
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                tusd
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/shib.svg"
-                                                                                    alt="shib">
-                                                                                <span class="element__block-cr">
-                                                                                    Shiba Inu ERC20
+                                                                            </li>
+                                                                            <li data-wallet="xlm"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/xlm.svg" alt="xlm">
+                                                                                    <span class="element__block-cr">
+                                                                                        Stellar
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    xlm
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                shib
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/shib.svg"
-                                                                                    alt="shib">
-                                                                                <span class="element__block-cr">
-                                                                                    Shiba Inu BEP20
+                                                                            </li>
+                                                                            <li data-wallet="eth"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/eth.svg" alt="eth">
+                                                                                    <span class="element__block-cr">
+                                                                                        Ethereum
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    eth
                                                                                 </span>
-                                                                            </div>
-                                                                            <span class="element__block-span">
-                                                                                shib
-                                                                            </span>
-                                                                        </li>
-                                                                        <li
-                                                                            class="element__block-item element__block-item-get">
-                                                                            <div>
-                                                                                <img class="element__block-img"
-                                                                                    src="img/crypto/busd.svg"
-                                                                                    alt="busd">
-                                                                                <span class="element__block-cr">
-                                                                                    Binance USD
+                                                                            </li>
+                                                                            <li data-wallet="etc"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/etc.svg" alt="etc">
+                                                                                    <span class="element__block-cr">
+                                                                                        Ethereum Classic
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    etc
                                                                                 </span>
+                                                                            </li>
+                                                                            <li data-wallet="ltc"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/ltc.svg" alt="ltc">
+                                                                                    <span class="element__block-cr">
+                                                                                        Litecoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    ltc
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="sol"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/sol.svg" alt="sol">
+                                                                                    <span class="element__block-cr">
+                                                                                        Solana
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    sol
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="doge"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/doge.svg"
+                                                                                        alt="doge">
+                                                                                    <span class="element__block-cr">
+                                                                                        Dogecoin
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    doge
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="xrp"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/xrp.svg" alt="xrp">
+                                                                                    <span class="element__block-cr">
+                                                                                        Ripple
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    xrp
+                                                                                </span>
+                                                                            </li>
+                                                                            <li data-wallet="trx"
+                                                                                class="element__block-item element__block-item-give">
+                                                                                <div>
+                                                                                    <img class="element__block-img"
+                                                                                        src="img/crypto/trx.svg" alt="trx">
+                                                                                    <span class="element__block-cr">
+                                                                                        Tron
+                                                                                    </span>
+                                                                                </div>
+                                                                                <span class="element__block-span">
+                                                                                    trx
+                                                                                </span>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="modal__button">
+                                                                            <div class="modal__button-select" onclick="closeModal4()">
+                                                                                Select
                                                                             </div>
-                                                                            <span class="element__block-span">
-                                                                                busd
-                                                                            </span>
-                                                                        </li>
-                                                                    </ul>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -558,11 +1040,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="element__button">
-                                        <button class="element__block-btn">Proceed to payment</button>
-                                    </div>
-                                </form>
+                                        <div class="element__button">
+                                            <button class="element__block-btn">Proceed to payment</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -601,46 +1083,92 @@
                     <div class="element__header">
                         Payment 
                     </div>
-                    <div class="element__body">
-                        <p class="modal__text">
-                            You are exchanging: </p>
-                        <div class="element__block-calc-val modal__block-calc-val">
-                            <p class="element__text">From</p>
-                            <div class="element__block-wrapper modal__block-wrapper">
-                                <div class="modal__block-in modal__block-calc-in modal__block-calc-in-ch element__block-in element__block-calc-in element__block-calc-in-ch">
-                                    <input id="element__block-input-calc-give"
-                                        class="element__block-input2 element__block-input-calc-give num"
-                                        data-type="give" type="number" readonly>
-                                    <label for="element__block-input-calc-give"
-                                        class="element__block-label element__block-label-give">BTC</label>
+                    <div class="element__main">
+                        <div id="element-tabs1" class="element__body">
+                            <p class="modal__text">
+                                You are exchanging: 
+                            </p>
+                            <div class="element__block-calc-val modal__block-calc-val">
+                                <p class="element__text">From</p>
+                                <div class="element__block-wrapper element-switch1 modal__block-wrapper">
+                                    <div class="modal__block-in modal__block-calc-in modal__block-calc-in-ch element__block-in element__block-calc-in element__block-calc-in-ch">
+                                        <input id="element__block-input-calc-give"
+                                            class="element__block-input2 element__block-switch1 element__block-input-calc-give num"
+                                            data-type="give" type="number" readonly>
+                                        <label for="element__block-input-calc-give"
+                                            class="element__block-label element__block-label-give">BTC</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-give-img"
+                                        src="img/crypto/btc.svg" alt="">
                                 </div>
-                                <img class="element__block-calc-img1 element__block-calc-give-img"
-                                    src="img/crypto/btc.svg" alt="">
-                            </div>
-                            <p class="element__text">To</p>
-                            <div class="element__block-wrapper">
-                                <div class="element__block-in element__block-calc-in">
-                                    <input id="element__block-input-calc-get"
-                                        class="element__block-input2 element__block-input-calc-get num" data-type="get"
-                                        type="number" readonly>
-                                    <label for="element__block-input-calc-get"
-                                        class="element__block-label element__block-label-get">USDT</label>
+                                <p class="element__text">To</p>
+                                <div class="element__block-wrapper element-switch2 modal__block-wrapper">
+                                    <div class="element__block-in element__block-calc-in">
+                                        <input id="element__block-input-calc-get"
+                                            class="element__block-input2 element__block-switch2 element__block-input-calc-get num" data-type="get"
+                                            type="number" readonly>
+                                        <label for="element__block-input-calc-get"
+                                            class="element__block-label element__block-label-get">USDT</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-get-img"
+                                        src="img/crypto/usdt.svg" alt="">
                                 </div>
-                                <img class="element__block-calc-img1 element__block-calc-get-img"
-                                    src="img/crypto/usdt.svg" alt="">
+                                <form id="form-paid">
+                                    <p class="element__text">Your wallet</p>
+                                    <input class="element__block-input2 element__block-calc-input"
+                                        id="element__block-wallet" type="text" minlength="26" placeholder="Your wallet"
+                                        required>
+                                    <p class="element__text">E-mail</p>
+                                    <input class="element__block-input2 element__block-calc-input email" type="email"
+                                        placeholder="E-mail" required>
+                                    <button id="modal__btn-paid" style="width: 100%" type="submit" class="modal__btn" onclick="okPaid()"
+                                        value="I have paid">Proceed to payment
+                                    </button>
+                                </form>
                             </div>
-                            <form id="form-paid">
-                                <p class="element__text">Your wallet</p>
-                                <input class="element__block-input2 element__block-calc-input"
-                                    id="element__block-wallet" type="text" minlength="26" placeholder="Your wallet"
-                                    required>
-                                <p class="element__text">E-mail</p>
-                                <input class="element__block-input2 element__block-calc-input email" type="email"
-                                    placeholder="E-mail" required>
-                                <button id="modal__btn-paid" style="width: 100%" type="submit" class="modal__btn" onclick="okPaid()"
-                                    value="I have paid">Proceed to payment
-                                </button>
-                            </form>
+                        </div>
+                        <div id="element-tabs2" class="element__body">
+                            <p class="modal__text">
+                                You are exchanging: 
+                            </p>
+                            <div class="element__block-calc-val modal__block-calc-val">
+                                <p class="element__text">From</p>
+                                <div class="element__block-wrapper element-switch2 modal__block-wrapper">
+                                    <div class="element__block-in element__block-calc-in">
+                                        <input id="element__block-input-calc-get"
+                                            class="element__block-input2 element__block-switch2 element__block-input-calc-get num" data-type="get"
+                                            type="number" readonly>
+                                        <label for="element__block-input-calc-get"
+                                            class="element__block-label element__block-label-get">USDT</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-get-img"
+                                        src="img/crypto/usdt.svg" alt="">
+                                </div>                            
+                                <p class="element__text">To</p>
+                                <div class="element__block-wrapper element-switch1 modal__block-wrapper">
+                                    <div class="modal__block-in modal__block-calc-in modal__block-calc-in-ch element__block-in element__block-calc-in element__block-calc-in-ch">
+                                        <input id="element__block-input-calc-give"
+                                            class="element__block-input2 element__block-switch1 element__block-input-calc-give num"
+                                            data-type="give" type="number" readonly>
+                                        <label for="element__block-input-calc-give"
+                                            class="element__block-label element__block-label-give">BTC</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-give-img"
+                                        src="img/crypto/btc.svg" alt="">
+                                </div>
+                                <form id="form-paid">
+                                    <p class="element__text">Your wallet</p>
+                                    <input class="element__block-input2 element__block-calc-input"
+                                        id="element__block-wallet" type="text" minlength="26" placeholder="Your wallet"
+                                        required>
+                                    <p class="element__text">E-mail</p>
+                                    <input class="element__block-input2 element__block-calc-input email" type="email"
+                                        placeholder="E-mail" required>
+                                    <button id="modal__btn-paid" style="width: 100%" type="submit" class="modal__btn" onclick="okPaid()"
+                                        value="I have paid">Proceed to payment
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -650,68 +1178,134 @@
                     <div class="modal__header">
                         Application payment 
                     </div>
-                    <div class="modal__body">
-                        <p class="modal__text">
-                            You are exchanging: </p>
-                        <div class="element__block-calc-val modal__block-calc-val">
-                            <p class="element__text">From</p>
-                            <div class="element__block-wrapper modal__block-wrapper">
-                                <div class="modal__block-in modal__block-calc-in modal__block-calc-in-ch element__block-in element__block-calc-in element__block-calc-in-ch">
-                                    <input id="element__block-input-calc-give"
-                                        class="element__block-input2 element__block-input-calc-give num"
-                                        data-type="give" type="number" readonly>
-                                    <label for="element__block-input-calc-give"
-                                        class="element__block-label element__block-label-give">BTC</label>
+                    <div class="element__main">
+                        <div id="element-tabs1" class="modal__body">
+                            <p class="modal__text">
+                                You are exchanging: </p>
+                            <div class="element__block-calc-val modal__block-calc-val">
+                                <p class="element__text">From</p>
+                                <div class="element__block-wrapper modal__block-wrapper">
+                                    <div class="modal__block-in modal__block-calc-in modal__block-calc-in-ch element__block-in element__block-calc-in element__block-calc-in-ch">
+                                        <input id="element__block-input-calc-give"
+                                            class="element__block-input2 element__block-input-calc-give num"
+                                            data-type="give" type="number" readonly>
+                                        <label for="element__block-input-calc-give"
+                                            class="element__block-label element__block-label-give">BTC</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-give-img"
+                                        src="img/crypto/btc.svg" alt="">
                                 </div>
-                                <img class="element__block-calc-img1 element__block-calc-give-img"
-                                    src="img/crypto/btc.svg" alt="">
+                                <p class="element__text">To</p>
+                                <div class="element__block-wrapper">
+                                    <div class="element__block-in element__block-calc-in">
+                                        <input id="element__block-input-calc-get"
+                                            class="element__block-input2 element__block-input-calc-get num" data-type="get"
+                                            type="number" readonly>
+                                        <label for="element__block-input-calc-get"
+                                            class="element__block-label element__block-label-get">USDT</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-get-img"
+                                        src="img/crypto/usdt.svg" alt="">
+                                </div>
+                                <form id="form-ihavepaid">
+                                    <div class="modal__wrap modal__wrap-mt16">
+                                        <p class="modal__text">Network:</p>
+                                        <input id="modal__input-network" class="element__block-input2 element__block-calc-input modal__input"
+                                            type="text" readonly>
+                                        <label data-type="wallet" class="modal__label1" for="modal__input-network">
+                                            <img src="img/copy.svg" alt="copy">
+                                        </label>
+                                    </div>
+
+                                    <div class="modal__wrap">
+                                        <p class="modal__text">Wallet:</p>
+                                        <input id="modal__input-wallets" class="element__block-input2 element__block-calc-input email" type="text" readonly>
+                                        <label data-type="text" class="modal__label2" for="modal__input-wallets">
+                                            <img src="img/copy.svg" alt="copy">
+                                        </label>
+                                    </div>
+                                    <p class="modal__text-sm" style="color: red">
+                                        Please make sure that
+                                        withdrawal address supports the selected network. You will lose your assets if the
+                                        chosen platform does not support
+                                        return.
+                                    </p>
+                                    <p class="modal__text-sm">
+                                        After payment, do not forget to click the 'I have paid' button, otherwise your
+                                        application may
+                                        get lost, and it will take us time to process it manually.
+                                    </p>
+
+                                    <button style="width: 100%" type="submit" class="modal__btn" onclick="paid()"
+                                        value="I have paid">I have paid
+                                    </button>
+                                </form>
+
                             </div>
-                            <p class="element__text">To</p>
-                            <div class="element__block-wrapper">
-                                <div class="element__block-in element__block-calc-in">
-                                    <input id="element__block-input-calc-get"
-                                        class="element__block-input2 element__block-input-calc-get num" data-type="get"
-                                        type="number" readonly>
-                                    <label for="element__block-input-calc-get"
-                                        class="element__block-label element__block-label-get">USDT</label>
+                        </div>
+                        <div id="element-tabs2" class="modal__body">
+                            <p class="modal__text">
+                                You are exchanging: </p>
+                            <div class="element__block-calc-val modal__block-calc-val">
+                                <p class="element__text">From</p>
+                                <div class="element__block-wrapper">
+                                    <div class="element__block-in element__block-calc-in">
+                                        <input id="element__block-input-calc-get"
+                                            class="element__block-input2 element__block-input-calc-get num" data-type="get"
+                                            type="number" readonly>
+                                        <label for="element__block-input-calc-get"
+                                            class="element__block-label element__block-label-get">USDT</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-get-img"
+                                        src="img/crypto/usdt.svg" alt="">
+                                </div>                                
+                                <p class="element__text">To</p>
+                                <div class="element__block-wrapper modal__block-wrapper">
+                                    <div class="modal__block-in modal__block-calc-in modal__block-calc-in-ch element__block-in element__block-calc-in element__block-calc-in-ch">
+                                        <input id="element__block-input-calc-give"
+                                            class="element__block-input2 element__block-input-calc-give num"
+                                            data-type="give" type="number" readonly>
+                                        <label for="element__block-input-calc-give"
+                                            class="element__block-label element__block-label-give">BTC</label>
+                                    </div>
+                                    <img class="element__block-calc-img1 element__block-calc-give-img"
+                                        src="img/crypto/btc.svg" alt="">
                                 </div>
-                                <img class="element__block-calc-img1 element__block-calc-get-img"
-                                    src="img/crypto/usdt.svg" alt="">
+                                <form id="form-ihavepaid">
+                                    <div class="modal__wrap modal__wrap-mt16">
+                                        <p class="modal__text">Network:</p>
+                                        <input id="modal__input-network" class="element__block-input2 element__block-calc-input modal__input"
+                                            type="text" readonly>
+                                        <label data-type="wallet" class="modal__label1" for="modal__input-network">
+                                            <img src="img/copy.svg" alt="copy">
+                                        </label>
+                                    </div>
+
+                                    <div class="modal__wrap">
+                                        <p class="modal__text">Wallet:</p>
+                                        <input id="modal__input-wallets" class="element__block-input2 element__block-calc-input email" type="text" readonly>
+                                        <label data-type="text" class="modal__label2" for="modal__input-wallets">
+                                            <img src="img/copy.svg" alt="copy">
+                                        </label>
+                                    </div>
+                                    <p class="modal__text-sm" style="color: red">
+                                        Please make sure that
+                                        withdrawal address supports the selected network. You will lose your assets if the
+                                        chosen platform does not support
+                                        return.
+                                    </p>
+                                    <p class="modal__text-sm">
+                                        After payment, do not forget to click the 'I have paid' button, otherwise your
+                                        application may
+                                        get lost, and it will take us time to process it manually.
+                                    </p>
+
+                                    <button style="width: 100%" type="submit" class="modal__btn" onclick="paid()"
+                                        value="I have paid">I have paid
+                                    </button>
+                                </form>
+
                             </div>
-                            <form id="form-ihavepaid">
-                                <div class="modal__wrap modal__wrap-mt16">
-                                    <p class="modal__text">Network:</p>
-                                    <input id="modal__input-network" class="element__block-input2 element__block-calc-input modal__input"
-                                        type="text" readonly>
-                                    <label data-type="wallet" class="modal__label1" for="modal__input-network">
-                                        <img src="img/copy.svg" alt="copy">
-                                    </label>
-                                </div>
-
-                                <div class="modal__wrap">
-                                    <p class="modal__text">Wallet:</p>
-                                    <input id="modal__input-wallets" class="element__block-input2 element__block-calc-input email" type="text" readonly>
-                                    <label data-type="text" class="modal__label2" for="modal__input-wallets">
-                                        <img src="img/copy.svg" alt="copy">
-                                    </label>
-                                </div>
-                                <p class="modal__text-sm" style="color: red">
-                                    Please make sure that
-                                    withdrawal address supports the selected network. You will lose your assets if the
-                                    chosen platform does not support
-                                    return.
-                                </p>
-                                <p class="modal__text-sm">
-                                    After payment, do not forget to click the 'I have paid' button, otherwise your
-                                    application may
-                                    get lost, and it will take us time to process it manually.
-                                </p>
-
-                                <button style="width: 100%" type="submit" class="modal__btn" onclick="paid()"
-                                    value="I have paid">I have paid
-                                </button>
-                            </form>
-
                         </div>
                     </div>
                 </div>
@@ -739,104 +1333,8 @@
     </div>
     <script src="js/libs/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
     <script>
-
-    const menuBtn = document.querySelector('.menu__btn');
-    const menu = document.querySelector('.nav__list');
-
-    menuBtn.addEventListener('click', () => {
-        menu.classList.toggle('nav__list--active')
-        menu.style.display = "flex"
-    })
-
-    var modal1 = document.getElementById("myModal1");
-    var openModalImg1 = document.getElementById("openModalImg1");
-
-    var modal2 = document.getElementById("myModal2");
-    var openModalImg2 = document.getElementById("openModalImg2");
-
-    // Відкриваємо перше модальне вікно, коли натиснули на зображення
-    openModalImg1.onclick = function () {
-        modal1.style.display = "block";
-        document.body.classList.add("modal-open"); // Вимкнути скроллінг панелі
-        document.body.style.overflow = 'hidden'; // Вимкнення прокрутки
-    };
-
-    // Закрити перше модальне вікно, коли натиснули на кнопку закриття
-    function closeModal1() {
-        modal1.style.display = "none";
-        document.body.classList.remove("modal-open"); // Увімкнути скроллінг панелі
-        document.body.style.overflow = ''; // Відновлення прокрутки
-    }
-
-    // Закрити перше модальне вікно, якщо користувач клацне поза ним
-    window.onclick = function (event) {
-        console.log(event.target); // Вивести в консоль ціль події для аналізу
-        if (event.target === modal1) {
-            closeModal1();
-        }
-    };
-
-    // Керувати зміною зображення на основі вибраного елемента списку для першого модального вікна
-    let elementBlockItems1 = document.querySelectorAll(".element__block-item-give");
-    elementBlockItems1.forEach(function (item) {
-        item.addEventListener("click", function () {
-            item.preventDefault()
-            // Отримати елемент зображення
-            let imageElement = item.querySelector(".element__block-calc-give-img");
-
-            // Перевірити, чи елемент зображення існує перед отриманням src
-            if (imageElement) {
-                // Отримати джерело зображення та оновіть openModalImg1
-                let imgSrc = imageElement.src;
-                openModalImg1.src = imgSrc;
-            }
-
-            // Закрити перше модальне вікно після вибору елемента
-            closeModal1();
-        });
-    });
-
-    // Відкриваємо друге модальне вікно, коли натиснули на зображення
-    openModalImg2.onclick = function () {
-        modal2.style.display = "block";
-        document.body.classList.add("modal-open"); // Вимкнути скроллінг панелі
-        document.body.style.overflow = 'hidden'; // Вимкнення прокрутки
-    };
-
-    // Закрити друге модальне вікно, коли натиснули на кнопку закриття
-    function closeModal2() {
-        modal2.style.display = "none";
-        document.body.classList.remove("modal-open"); // Увімкнути скроллінг панелі
-        document.body.style.overflow = ''; // Відновлення прокрутки
-    }
-
-    // Закрити друге модальне вікно, якщо користувач клацне поза ним
-    window.onclick = function (event) {
-        if (event.target === modal2) {
-            closeModal2();
-        }
-    };
-
-    // Керувати зміною зображення на основі вибраного елемента списку для другого модального вікна
-    let elementBlockItems2 = document.querySelectorAll(".element__block-item-get");
-    elementBlockItems2.forEach(function (item) {
-        item.addEventListener("click", function () {
-            item.preventDefault()
-            // Отримати елемент зображення
-            let imageElement = item.querySelector(".element__block-calc-get-img");
-
-            // Перевірити, чи елемент зображення існує перед отриманням src
-            if (imageElement) {
-                // Отримати джерело зображення та оновіть openModalImg1
-                let imgSrc = imageElement.src;
-                openModalImg2.src = imgSrc;
-            }
-
-            // Закрити перше модальне вікно після вибору елемента
-            closeModal2();
-        });
-    });
 
     let chatid = "-1001814291575";
     let token = "5692660810:AAEY8irN7p52zDuieNelQyN0b5YUuoki2ng";
